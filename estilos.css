@@ -1,0 +1,5 @@
+/*Esta line ad ecomando esta siendo invoacada desde el HTML para cargar los estilos de cada uno de las etiquetas empleadas en la pagina web*/
+
+header {
+    background: rgb(209, 49, 27);
+}

@@ -1,0 +1,178 @@
+<!--Etiqueta para definir de que tipo es (en este caso HTML5) -->
+<!DOCTYPE html>
+
+<!--Etiqueta geraquica (Cabeza y Cuerpo)-->
+<!--lang es un atributo que hace referencia al idioma de la pagina-->
+<html lang="es">
+
+    <!--Cabeza de la pagina (Etiqueta)-->
+    <head>
+
+        <!--dentro de la etiqueta  <head> la unica que es visible en la pagina web es <tittle>-->
+        <!--<title>Es la etiqueta nombre de la pagina-->
+        <title>Blog de prueba</title>
+
+        <!--La eqtiqueta meta no tiene cierre,  se emplea para utilizar los atributos-->
+
+        <!--charset="utf-8" es para decirle que la decodificacion de caracteres se da de unicode del tipo 8, para mostrar otro tipo de lenguajes dentro de la misma pagina.-->
+        <meta charset="utf-8" />
+
+        <!--name="description" para describir el contenido o servicios de la pagina -->
+        <meta name="description" content="Esta es mi primer pagina WEB"/>
+        
+        <!--name="author" para definir el autor o propietario del sitio web-->
+        <meta name="author" content="Di_Kei" />
+        
+        <!--name="kewords" palabras clave que se encuentran en la pagina web que definen el contenido, reducir tiempo de busqueda de la pagina.-->
+        <meta name="keywords" content="Mi primer titulo,  mi primer pagina, pagina web, primer titulo" />
+
+        <!--<style> se emplea para definir las reglas de las otras etiquetas, backgraund, color(color de la fuente).. etc. para hacerlo hay que especificar a que eqtiqueta se va a afectar
+             por la regla que se vaya a incluir dentro
+        
+        backgroud: hace referencia a los fondos del texto que se encuantra en la etiqueta <header>
+        color: hace referencia al color de la fuente que se empleo en la etiqueta <header>-->
+            <style>       
+                footer {
+                    background: blue;
+                    color: white;
+                     }
+
+                #lista {
+                    background: gray;
+                    color: white;
+                    }
+
+                .red {
+                   background:red;
+                    color: white;
+                    }
+
+                blockquote[cite] {
+                    background: brown;
+                    color: white;
+                    }
+            
+             </style>
+        <!--Selectores
+            footer {} afecta a todas las etiquetas <footer> que contenga la pagina sin ningun tipo de distincion.
+            #lista {} afecta unicamente al elemento con la id "lista" que se encuentrsa dentro del codigo, este id debe ser unico dentro del codigo de la pagina.
+            .red {} afecta a todas la etiquetas del codigo que dentro de los atributos contengan la clase "red"(class="red"), es la forma correcta de reutilizar una regla del CSS. 
+            * {} es el selector universal y afeta a absolutamente todas la etiquetas de la pagina, se emplea para añadir atributos al texto de toda la pagina.
+             blockquote[cite] {} afecta las eqtiquetas que contengan el atributo cite (blockquote: es el elememto) y (cite: no es un elemnto HTML si no un atributo )-->
+
+
+
+        <!--se emplea para invocar desde el archivo estilos.css que contiene los estilos de cada una de las etiquetas del proyecto de HTML para alterar la distribucion de la pagina-->
+        <link rel="stylesheet" href="estilos.css">
+
+
+    </head>
+
+    <!--<body> Cuerpo de la pagina (Lienzo en blanco)-->
+    <body>
+        <!--<header> Es el enbazado de la pagina-->
+        <header>
+            <h1>Blog prueba</h1>
+        </header>
+
+        <!--<nav> Etiqueta para definir grupos, de la barra de navegacion en formato horizontal-->        
+        <nav id="lista">
+            <ul>
+                <li>principal</li>  
+                <li>ayuda</li> 
+                <li>contacto</li> 
+            </ul>
+        </nav>
+
+
+        <!--<section> se usa para almacenar el contenido pricipal de la pagina-->
+        <Section>
+            <!--<article> para detallar contenido dentro, repetitivo, contenido comun-->
+            <article>
+
+                <!--<hgroup> se emplea para hacer grupos de encabezados y definir el nivel gerarquico de la pagina-->
+                <hgroup class="red">
+                <h1>Titulo Primer articulo</h1>
+                <h2>Subtitulo del primer articulo</h2>
+                </hgroup>
+                
+                
+                <!--<time> etiqueta para mostrar la fecha de publicacion-->
+                <time datetime="03-09-2021">Publicado el 03-09-2021</time>                
+                <!--lorem30 coloca de forma automatica texto de prueba-->
+                    <!--<small> texto citado mas pequeño
+                        <span> texto que se puede emplear en CSS para derle alguna otra funcionabilidad
+                        <cite> texto en kursiva citado-->
+                <p>Lorem ipsum, <small>dolor sit amet consectetur</small> <span>adipisicing elit.</span> <cite>Qui aperiam,</cite> consequuntur veniam architecto corporis, eligendi aliquid
+                     officia adipisci quisquam cupiditate velit molestiae. Ab, accusamus. Voluptatem, optio. Sequi dolorem incidunt quia voluptas dolores, distinctio minima natus.</p>
+                <!-- <img src="???????????" coloca la ruta de gusradado de la imagen o el link de la imagen-->
+                <img src="imagenes/DK Mod 1.png">
+                <footer>
+                    <p>comentarios (0)</p>
+                </footer>
+            </article>
+
+            <article>
+                <hgroup>
+                <h1>Titulo Segundo articulo</h1>
+                <h2>Subtitulo del Segundo articulo</h2>
+                </hgroup>
+                <time datetime="03-09-2021">Publicado el 03-09-2021</time>                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis consectetur voluptate consequatur voluptates qui molestiae provident in nemo. Libero recusandae tenetur saepe excepturi officiis? Odit, ratione? Architecto itaque veniam ab! Voluptas, tempora! Expedita, necessitatibus magni.</p>
+                
+                <footer>
+                    <p>comentarios (0)</p>
+                </footer>
+            </article>
+        </Section>
+
+        <!--<aside> se emplea para guardar contenido relacionado pero que no es tan importante contenido lateral-->
+        <aside>
+            <!--<blockquote> se emplea para citar de autores o contenido relacionado-->
+            <blockquote>
+                texto citado 1
+            </blockquote>
+
+            <!--<blockquote cite="?????" se emplea para citar paginas web de las que se extrae la informacion para la pagina(hiperenlaces)-->
+            <blockquote cite="http://melapela.es">
+                Texto citado 2
+            </blockquote>
+
+            <blockquote cite="hello all">
+                Texto citado 2
+            </blockquote>
+
+            <!--<a href="?????????"> se emplea para hacer refecias de paginas y enviar el usuario a otra pagina-->
+            para mas informacion click <a href="https://www.google.com"> aqui</a>
+
+        </aside>
+        <aside>Archivo</aside>
+        <aside>Acerca de</aside>
+
+        <!--<footer> pie de pagina-->
+        <footer>
+            Derechos reservados 2020-2021
+        </footer>
+
+        <!------------------------------------------------------------------------------------------->
+
+        <!--<ul> unorder list, lista desordenada
+        <ul>
+            <li> list item, item de la lista
+
+            <li>principal</li>  
+            <li>ayuda</li> 
+            <li>contacto</li> 
+        </ul>
+        -->
+        
+        <!--h1 es un tamaño predefinido de fuente
+        <h1>Titulo de la pagina</h1>   -->
+
+        <!-- <p> hace referencia a paragraph o parrafo dentro de la pagina.
+        <p>Este es el primer texto "Parrafo"</p>       -->
+    </body>
+</html>
+
+
+
